@@ -1,0 +1,15 @@
+#!/bin/bash
+# shellcheck disable=SC2009
+
+# Get the PID of the current Bash process
+pid=$BASHPID
+
+# Use ps command to get information about all processes
+ps -eo pid,args |
+
+# Filter for the line containing the PID and the word "bash"
+grep "^ *$pid.*bash" |
+
+# Print the PID
+awk '{print $1}'
+
