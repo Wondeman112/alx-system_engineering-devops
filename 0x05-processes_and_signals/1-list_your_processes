@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Display list of currently running processes
+# including all processes for all users and without TTY
+
+# Get all processes with the -e option
+# Display in user-oriented format with the -o user,pid,ppid,cmd options
+
+ps -e --forest -o user,pid,ppid,cmd
+
