@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# Display list of currently running processes
-# including all processes for all users and without TTY
+# Display header
+echo "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND"
 
-# Get all processes with the -e option
-# Display in user-oriented format with the -o user,pid,ppid,cmd options
-
-ps -e --forest -o user,pid,ppid,cmd
+# Use ps command to display processes
+ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest
 
