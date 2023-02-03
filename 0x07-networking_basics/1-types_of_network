@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-3. LAN
-2. WAN
-1. Internet
-
+# This script answers questions
+3,2,1
