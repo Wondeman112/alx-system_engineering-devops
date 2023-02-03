@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+interfaces=$(ifconfig | grep -w inet | awk '{print $1}')
+
+for interface in $interfaces; do
+
+  ip=$(ifconfig $interface | grep -w inet | awk '{print $2}')
+
+  echo "$interface: $ip"
+
+done
