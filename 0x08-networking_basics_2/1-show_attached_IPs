@@ -9,3 +9,4 @@ for interface in $interfaces; do
   echo "$interface: $ip"
 
 done
+
